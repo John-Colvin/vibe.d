@@ -1,6 +1,10 @@
 language: d
 sudo: false
 
+os:
+  - linux
+  - osx
+
 services:
   - mongodb
   - redis-server
