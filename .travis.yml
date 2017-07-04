@@ -21,12 +21,16 @@ d:
   # catching most DMD version related build failures early
   - dmd-2.074.1
   - dmd-2.070.2
+  - ldc-1.2.0
   - ldc-1.1.1
   - ldc-1.0.0
   - dmd-2.073.2
   - dmd-2.072.2
   - dmd-2.071.2
   - dmd-beta
+  - ldc-beta
+  - dmd
+  - ldc
 
 env:
   - VIBED_DRIVER=libevent BUILD_EXAMPLE=1 RUN_TEST=1
@@ -43,8 +47,7 @@ matrix:
       env: VIBED_DRIVER=libasync BUILD_EXAMPLE=0 RUN_TEST=0
   allow_failures:
     - d: dmd-beta
-    - d: ldc-1.2.0-beta1
-      env: VIBED_DRIVER=libasync BUILD_EXAMPLE=0 RUN_TEST=0
+    - d: ldc-beta
     - d: ldc-1.1.1
       env: VIBED_DRIVER=libasync BUILD_EXAMPLE=0 RUN_TEST=0
 
